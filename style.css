@@ -1,0 +1,299 @@
+/* ======================= */
+/* ====== RESET ========= */
+/* ======================= */
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+:root {
+    --white-color : hsl(0, 0%, 98%);
+    --gray-color :  hsl(0, 0%, 41%);
+    --black-color :  hsl(0, 0%, 8%);
+}
+
+body {
+    background-color: var(--white-color);
+    color: var(--gray-color);
+    font-family: 'Epilogue' , sans-serif;
+}
+
+a {
+    color: var(--gray-color);
+}
+
+
+
+/* ============= */
+/* === Header === */
+/* ============== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline-start: 0.5em;
+    margin-block: 1em;
+    
+}
+
+nav {
+    position: absolute;
+    width: 70%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: var(--white-color);
+    display: none;
+}
+
+
+.active {
+    display: block;
+}
+
+
+
+#close__menu {
+    position: absolute; 
+    top: 1em;
+    right: 1em;
+
+}
+ 
+
+.navbar__menu {
+    margin-block: 3.5rem 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.navbar__menu li {
+    margin-left: 0.8em;
+}
+
+ a:hover {
+    color: black;
+}
+
+.login__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.btn {
+    color: var(--gray-color);
+    background-color: var(--white-color);
+    font-size: 1em;
+    font-family: 'Epilogue' , sans-serif;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: black;
+}
+
+.login {
+    border: none;
+}
+
+.register {
+    border: 2px solid --black-color;
+    border-radius: 0.6em;
+    padding: .5em 2em;
+}
+
+.feature__dropdown,
+.company__dropdown {
+    margin: 1em 1em;
+    padding: 1em 2em;
+    display: none;
+}
+
+.show__dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+/* ======================= */
+/* ===== Hero section ==== */
+/* ======================= */
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hero__img img {
+    display: block;
+    width: 100%;
+}
+
+#desktop__img {
+    display: none;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    text-align: center;
+    margin-inline: .4em;
+    margin-block: 2em;
+}
+
+.hero__heading {
+    color: black;
+}
+
+.hero__paragraph {
+    line-height: 1.5;
+}
+
+.hero-btn {
+    background-color: black;
+    color: white;
+    border: 2px solid;
+    border-radius: 0.9em;
+    font-size: 0.9em;
+    width: fit-content;
+    padding: .7rem 1rem;
+    margin-inline: auto;
+}
+
+.hero-btn:hover {
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+
+.hero__logo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hero__logo img {
+    width: 15%;
+    height: 20px;
+}
+
+/* ======================= */
+/* ====== media query ====== */
+/* ======================= */
+
+@media (min-width:45em) {
+    
+    .container {
+        width: 80%;
+        margin-left: auto;
+        margin-right: 2em;
+    }
+
+   /* header */
+
+   header {
+    margin-block: 2rem;
+   }
+
+    #main__logo {
+        margin-left: 3rem;
+    }
+
+    #mobile__img {
+        display: none;
+    }
+
+    #desktop__img {
+        display: block;
+    }
+
+    #close__menu {
+        display: none;
+    }
+
+    #menu__icon {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar__menu,
+    .login__btn {
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+    }
+
+    .login__btn {
+        gap: 2rem;
+    }
+
+    .feature__dropdown {
+        background: white;
+        position: absolute;
+        left:150px;
+        border-radius: 10px ;
+        box-shadow: 0 0 15px rgb(112, 111, 111);
+    }
+
+    .company__dropdown {
+        background: white;
+        position: absolute;
+        left:380px;
+        border-radius: 10px ;
+        box-shadow: 0 0 15px rgb(112, 111, 111);
+
+    }
+
+    /* hero section */
+
+    .hero__container {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    } 
+
+    .hero__img {
+        width: 45%;
+    }
+
+    .description {
+        margin: 0;
+        width: 45%;
+        text-align: left;
+        justify-content: flex-end;
+        gap: 3rem;
+    }
+
+    .hero__heading {
+        font-size: 4rem;
+    }
+
+    .hero__heading span {
+        display: block;
+    }
+
+    .hero-btn {
+        margin: 0;
+    }
+
+    .hero__logo {
+        margin-top: 2rem;
+    }
+}

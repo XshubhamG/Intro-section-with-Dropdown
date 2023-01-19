@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/a089befebb.js" crossorigin="anonymous"></script>
+
+
+  <!-- googlefont -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <!-- header  -->
+ <header>
+
+  <!-- logo -->
+  <img src="/images/logo.svg" alt="logo" id="main__logo">
+
+
+  <!-- container -->
+  <div class="container">
+
+    <img src="/images/icon-menu.svg" alt="menu-icon" id="menu__icon"  onclick="navbar()"> <!-- Menu Icon -->
+
+    <!-- navbar -->
+    <nav id="navbar">
+
+      <ul class="navbar__menu">
+        <img src="images/icon-close-menu.svg" alt="close-menu" id="close__menu"  onclick="navbar()"> <!-- Closed menu Icon -->
+
+        <li onclick="FeatureDropDown()"><a href="#">Features <img src="images/icon-arrow-down.svg">
+          <ul class="feature__dropdown">
+            <li><img src="/images/icon-todo.svg"> Todo List</li>
+            <li><img src="/images/icon-calendar.svg"> Calendar</li>
+            <li><img src="/images/icon-reminders.svg"> Reminders</li>
+            <li><img src="/images/icon-planning.svg"> Planning</li>
+          </ul>
+          </a></li> <!-- feature dropdown-->
+
+        <li onclick="CompanyDropdown()"><a href="#">Company <img src="images/icon-arrow-down.svg">
+           <ul class="company__dropdown">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+           </ul>
+           </a></li> <!-- company dropdown-->
+
+        <li><a href="#">Career</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    
+      <div class="login__btn">
+        <button class="login btn">Login</button>
+        <button class="register btn">Register</button>
+      </div>
+
+    </nav>
+  </div>
+ </header>
+
+ <!-- hero section -->
+ <main>
+  <div class="container hero__container">
+    <div class="hero__img">
+      <img src="/images/image-hero-mobile.png" alt="hero__img" id="mobile__img">
+      <img src="/images/image-hero-desktop.png" alt="hero__img" id="desktop__img">
+    </div>
+    <div class="description">
+      <h1 class="hero__heading"><span>Make</span> remote work</h1>
+      <p class="hero__paragraph">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+      <button class="hero-btn btn">Learn more</button>
+      <div class="hero__logo">
+        <img src="/images/client-databiz.svg">
+        <img src="/images/client-audiophile.svg">
+        <img src="/images/client-meet.svg">
+        <img src="/images/client-maker.svg"
+      </div>
+    </div>
+  </div>
+ </main>
+
+ <script src="index.js"></script>
+</body>
+
+</html>
