@@ -28,8 +28,8 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/XshubhamG/Intro-section-with-Dropdown.git)
-- Live Site URL: [Add live site URL here](https://golden-sunshine-974b7f.netlify.app)
+- Solution URL: [Github](https://github.com/XshubhamG/Intro-section-with-Dropdown.git)
+- Live Site URL: [Netlify](https://golden-sunshine-974b7f.netlify.app)
 
 ## My process
 
